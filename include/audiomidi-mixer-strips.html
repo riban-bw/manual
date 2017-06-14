@@ -36,7 +36,7 @@
 </p>
 
 <p>
-  Bellow are 3 buttons:
+  Below are 3 buttons:
 </p>
 
 <ul>
@@ -93,7 +93,7 @@
     get rid of <em>denormals</em>, which are very small numbers the CPU can have
     a hard time dealing with. To be used if the CPU consumption for plugins is
     noticeably higher than expected</td></tr>
-  <tr><th>Duplicate&hellip;</th><td>Copies the track to a new one, optionnaly with
+  <tr><th>Duplicate&hellip;</th><td>Copies the track to a new one, optionally with
     its playlist</td></tr>
   <tr><th>Remove</th><td>Deletes the track and its playlist</td></tr>
 </table>
@@ -112,13 +112,13 @@
   <tr><th>In <em>n</em></th><td>Those are the system inputs, e.g. to record from the
     soundcard. A mono track will have <em>In 1</em> and <em>In 2</em> separated,
     while a stereo track can have <em>In 1+2</em></td></tr>
-  <tr><th><em>Track n output</em></th><td>All the outputs of compatible tracks, e.g.,
+  <tr><th><em>Track n output</em></th><td>All the outputs of compatible tracks, e.g.
     a mono track can only receive a mono signal, a MIDI track can only receive MIDI
     signal, &hellip;</td></tr>
   <tr><th>Add Audio Port</th><td>Adds an audio input to the track, i.e. a mono audio
-    track becomes a stero one</td></tr>
+    track becomes a stereo one</td></tr>
   <tr><th>Add MIDI Port</th><td>Adds a MIDI input to the track. Adding it to an audio
-    track makes it a mixed Audio/MIDI track. This can be usefull e.g. to feed some
+    track makes it a mixed Audio/MIDI track. This can be useful e.g. to feed some
     plugins with a MIDI signal to control the audio, like a vocoder</td></tr>
   <tr><th>Routing Grid</th><td>Shows the <a href="@@patchbay"><kbd class="menu">Routing
     Grid</kbd> window</a>, which allows for more complex input configuration</td></tr>
@@ -134,13 +134,13 @@
 <p>
   On audio tracks, is a Trim knob, as on traditional consoles. It set the base
   input level for the track, avoiding any clipping. Notice that it trims both any
-  input, but (when playing back), also the level of the playlist as displayed in
+  input, and (when playing back), also the level of the playlist as displayed in
   the Editor. It makes sense as while playing, the input of the track is the
   playlist, on which the mixer strip acts.
 </p>
 
 <p>
-  On midi tracks, it is replaced by a MIDI Input button, that allows/disallows
+  On MIDI tracks, it is replaced by a MIDI Input button, that allows/disallows
   MIDI input on the track.
 </p>
 
@@ -163,7 +163,7 @@
 </p>
 
 <p>
-  It is also where the <a href="@@aux-sends">Sends</a> come from, wether
+  It is also where the <a href="@@aux-sends">Sends</a> come from, whether
   external or auxiliary.
 </p>
 
@@ -202,7 +202,7 @@
 
 <p>
   The most noticeable button here is the Record Enable one, with a red circle.
-  When enabled, next time the Global record will be armed and playback started,
+  When enabled, next time the Global record is armed and playback started,
   everything that comes from the input of the track will be recorded. Right clicking
   a disabled record button allows to enable <kbd class="menu">Rec-Safe</kbd>,
   thus protecting the track against accidental recording.
@@ -210,7 +210,7 @@
 
 <p>
   The buttons on the right, <kbd class="menu">In</kbd> and <kbd
-  class="menu">Disk</kbd>, show what the user is listening to by lighting up,
+  class="menu">Disk</kbd>, show what the user is listening to by their border lighting up,
   between the <em>In</em>put and the actual content of the playlist on
   <em>Disk</em>.
 </p>
@@ -256,14 +256,14 @@
 
 <p>
   The big Gain slider on the left allows to change the gain of the track. Its
-  default OdB value is reminded with a white horizontal line, and its precise
+  default 0dB value is indicated by a white horizontal line, and its precise
   value is shown in a text field above it, that doubles as a way to type in a
   numeric value.
 </p>
 
 <p>
-  The text field above the meter shows the "Peak", i.e. the mawimum value that has
-  been reached during playback. To avoid distortion, the value should stay below OdB,
+  The text field above the meter shows the "Peak", i.e. the maximum value that has
+  been reached during playback. To avoid distortion, the value should stay below 0dB,
   and if it goes above this value, the text field will turn red. Clicking on
   this field will reset the Peak value (for a new measurement or a new part of the
   track).
@@ -285,8 +285,8 @@
 
 <p>
   Clicking the button lists all the available control masters, and a menu option
-  to <kbd class="menu">Unassign all</kbd>. Notice that a track can have be a slave
-  to as many VCAs as they are in the session, hence multiplying the number
+  to <kbd class="menu">Unassign all</kbd>. Notice that a track can be a slave
+  to as many VCAs as there are in the session, hence multiplying the number
   of VCA buttons. The displayed number is the number of the VCA,
   not the count of VCAs linked to the track. A track with no VCA assigned
   will show a unique button with a "<kbd class="menu">-vca-</kbd>" label instead
@@ -305,8 +305,8 @@
   <tr><th>Manual</th><td><em>(default)</em> The playback won't use the fader automation
     data</td></tr>
   <tr><th>Play</th><td>Enables playback/use of fader automation data</td></tr>
-  <tr><th>Write</th><td>While the transport is rolling, all fader changes will be
-    recorded to the fader automation lane</td></tr>
+  <tr><th>Write</th><td>While the transport is rolling, the current fader position will be
+    recorded to the fader automation lane. After stopping the transport, the mode changes to Touch.</td></tr>
   <tr><th>Touch</th><td>While the transport is rolling, touching the fader will initiate
     recording all fader changes until the fader is released. When the fader is not
     being touched, existing automation data will be played/used to control the gain
@@ -318,14 +318,14 @@
 <p>
   This button displays the mix group information as does the tab in the header
   (see above). It is convenient though, as it allows to quickly switch the track
-  from one group to another with a drop down menu, also allowing to affect the
-  track to a non-adjascent group (which the tab won't easily allow).
+  from one group to another with a drop down menu, also allowing to move the
+  track to a non-adjacent group (which the tab won't easily allow).
 </p>
 
 <h3>Metering Point</h3>
 
 <p>
-  The metering displayed in the meter is by default is 'Post', i.e. Post fader.
+  The metering displayed in the meter by default is 'Post', i.e. Post fader.
   It can be changed with this button to Any point of the signal flow:
 </p>
 
@@ -351,7 +351,7 @@
 <p>
   This buttons open up a little text editor, that can be used to add some
   written notes to the track, as e.g. a particular setting. The button's caption
-  is replaced by the beginning of the text, so it can be used as a "sub" name for
+  is replaced by the first word of the text, so it can be used as a "sub" name for
   the track.
 </p>
 
